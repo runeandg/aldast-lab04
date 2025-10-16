@@ -68,15 +68,17 @@ public class BST {
   }
 
   int minimum() {
-    // TODO: Implement this operation
-    throw new RuntimeException("Not yet implemented!");
-
+    if (hasLeft()) {
+      return left.minimum();
+    }
+    return value;
   }
 
   int maximum() {
-    // TODO: Implement this operation
-    throw new RuntimeException("Not yet implemented!");
-
+    if (hasRight()) {
+      return right.maximum();
+    }
+    return value;
   }
 
   boolean contains(int givenValue) {
